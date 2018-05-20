@@ -1,23 +1,25 @@
 # About Band
 
-Microservice framework for Rockstat platform. Used for serving custom user services.
-Built on top of asyncio, for communication uses JSON-RPC2 over Redis PubSub so that incredible fast!
+Band is a microservice framework for the Rockstat platform. It is used for serving user's custom services.
+The framework is built on top of asyncio, JSON-RPC2 over Redis PubSub is used for communication which means it's incredibly fast!
 
 
 ## Components
 
-#### director
+#### Director
 
+Director's main function is to orchestrate Rockstat platform's microservices. It can be run on the remote host or inside the docker container.
 Занимается оркестрацией микросервисов сервисов.
 Может запускаться на хосте или в контейнере
 
-#### service (one of many)
-
-содержит бизнес логику и необходимые данные. 
+#### Services
+Services contain business logic and all necessary data. They form the "skeleton" of the platform and responsible for all its' functions. 
+содержит бизнес логику и необходимые данные.
 Каждый сервис запускается в своем отдельном контейнере
 
-#### Фичи
+#### Features
 
+-Automatic port allocation on a host
 Автоматическая аллокация портов на хостовой машине
 
 
